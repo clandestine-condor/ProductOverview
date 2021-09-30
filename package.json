@@ -1,0 +1,29 @@
+{
+  "name": "productoverview",
+  "version": "1.0.0",
+  "description": "SDC  for ProductOverview",
+  "main": "productsMOngo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate-make": "knex migrate:make $1 --cwd=. --knexfile ./src/knexfile.js",
+    "migrate-latest": "knex migrate:latest --cwd=. --knexfile ./src/knexfile.js",
+    "migrate-rollback": "knex migrate:rollback --cwd=. --knexfile ./src/knexfile.js",
+    "postgres": "sudo -u postgres psql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clandestine-condor/ProductOverview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clandestine-condor/ProductOverview/issues"
+  },
+  "homepage": "https://github.com/clandestine-condor/ProductOverview#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "knex": "^0.95.11",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.1"
+  }
+}
