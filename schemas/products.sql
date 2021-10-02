@@ -11,6 +11,8 @@ CREATE TABLE products (
   description varchar(250),
   category varchar(50),
   default_price integer NOT NULL,
+
+   ON DELETE CASCADE
 );
 
 CREATE TABLE features (
@@ -21,7 +23,6 @@ CREATE TABLE features (
 
   FOREIGN KEY(product_id)
     REFERENCES products(product_id)
-    ON DELETE CASCADE
 );
 
 CREATE INDEX idx_product_id ON features (product_id)
@@ -33,7 +34,6 @@ CREATE TABLE related_products (
 
   FOREIGN KEY(product_id)
     REFERENCES products(product_id)
-    ON DELETE CASCADE
 );
 
 CREATE INDEX idx_product_id ON related_products (product_id)
@@ -48,7 +48,6 @@ CREATE TABLE styles (
 
   FOREIGN KEY(product_id)
     REFERENCES products(product_id)
-    ON DELETE CASCADE
 );
 
 CREATE INDEX idx_product_id ON styles (product_id)
@@ -61,7 +60,6 @@ CREATE TABLE photos (
 
   FOREIGN KEY(style_id)
     REFERENCES styles(style_id)
-      ON DELETE CASCADE
 )
 
 CREATE INDEX idx_style_id ON photos (style_id)
@@ -74,7 +72,6 @@ CREATE TABLE sku (
 
   FOREIGN KEY(style_id)
     REFERENCES styles(style_id)
-      ON DELETE CASCADE
 )
 
 CREATE INDEX idx_style_id ON sku (style_id)

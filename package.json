@@ -8,7 +8,8 @@
     "migrate-make": "knex migrate:make $1 --cwd=. --knexfile ./src/knexfile.js",
     "migrate-latest": "knex migrate:latest --cwd=. --knexfile ./src/knexfile.js",
     "migrate-rollback": "knex migrate:rollback --cwd=. --knexfile ./src/knexfile.js",
-    "postgres": "sudo -u postgres psql"
+    "postgres": "sudo -u postgres psql",
+    "start": "nodemon src/api/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/clandestine-condor/ProductOverview#readme",
   "dependencies": {
     "csv-parser": "^3.0.0",
+    "express": "^4.17.1",
     "knex": "^0.95.11",
     "lodash": "^4.17.21",
     "pg": "^8.7.1"

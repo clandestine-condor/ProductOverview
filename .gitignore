@@ -2,3 +2,6 @@ data/
 migrations/
 node_modules/
 /schemas/test.sql
+/schemas/queries.sql
+/schemas/importdata.sql
+
