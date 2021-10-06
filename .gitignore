@@ -1,7 +1,9 @@
 data/
-migrations/
 node_modules/
+/src/knexfile.js
 /schemas/test.sql
 /schemas/queries.sql
 /schemas/importdata.sql
+/src/api/products
+src/api/routes
 

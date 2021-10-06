@@ -9,7 +9,8 @@
     "migrate-latest": "knex migrate:latest --cwd=. --knexfile ./src/knexfile.js",
     "migrate-rollback": "knex migrate:rollback --cwd=. --knexfile ./src/knexfile.js",
     "postgres": "sudo -u postgres psql",
-    "start": "nodemon src/api/server.js"
+    "dev": "nodemon src/api/server.js",
+    "start": "node src/api/server.js"
   },
   "repository": {
     "type": "git",
