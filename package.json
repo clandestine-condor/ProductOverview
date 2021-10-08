@@ -10,7 +10,8 @@
     "migrate-rollback": "knex migrate:rollback --cwd=. --knexfile ./src/knexfile.js",
     "postgres": "sudo -u postgres psql",
     "dev": "nodemon src/api/server.js",
-    "start": "node src/api/server.js"
+    "start": "node src/api/server.js",
+    "k6": "k6 run src/api/helpers/k6Script.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/clandestine-condor/ProductOverview#readme",
   "dependencies": {
     "csv-parser": "^3.0.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "knex": "^0.95.11",
     "lodash": "^4.17.21",
