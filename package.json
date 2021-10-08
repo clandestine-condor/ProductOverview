@@ -10,7 +10,7 @@
     "migrate-rollback": "knex migrate:rollback --cwd=. --knexfile ./src/knexfile.js",
     "postgres": "sudo -u postgres psql",
     "dev": "nodemon src/api/server.js",
-    "start": "node src/api/server.js",
+    "start": "npm run migrate-latest && node src/api/server.js",
     "k6": "k6 run src/api/helpers/k6Script.js"
   },
   "repository": {
