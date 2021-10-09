@@ -1,3 +1,4 @@
+require('newrelic');
 require('dotenv').config()
 const knexfile = require("../knexfile.js")
 const knex = require('knex')(knexfile);
