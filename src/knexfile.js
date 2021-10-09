@@ -1,3 +1,6 @@
+if (!process.env.DB_DATABASE) {
+  require('dotenv').config({path: '../.env'})
+}
 const {DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE} = process.env
 
 module.exports = {
