@@ -6,3 +6,4 @@ node_modules/
 /src/api/products
 src/api/routes
 .env
+newrelic_agent.log

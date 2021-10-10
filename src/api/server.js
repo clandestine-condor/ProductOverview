@@ -1,8 +1,10 @@
-require('newrelic');
 require('dotenv').config()
+if (process.env.NODE_ENV === 'production') require('newrelic');
 const knexfile = require("../knexfile.js")
 const knex = require('knex')(knexfile);
 const express = require('express')
+const path = require('path')
+const {LOADERIO_URL} = process.env
 
 const app = express()
 
@@ -17,9 +19,22 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/')
+
 app.get('/products', async(req, res) => {
   const results = await knex.select().from('products').limit(5)
   res.send(results)
+})
+
+app.get(LOADERIO_URL, (req, res) => {
+  const file = path.join(__dirname, '/loaderioverification.txt')
+  res.sendFile(file ,(err) => {
+    if (err) {
+      res.send(err)
+    } else {
+      console.log('File Sent:', file)
+    }
+  })
 })
 
 const getProductByProductId = async (productId) => {
