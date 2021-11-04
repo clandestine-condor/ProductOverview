@@ -13,7 +13,7 @@ For this project, I worked with a team to refactor a monolithic API for an e-com
 * Seeded PostgreSQL database with over 10 million entries of product and product styles data.
 * Tested multiple raw queries to the database. After finding the optimal combination of JOINS and JSON aggregate functions, along with the use of indices, was able to reduce local data retrieval times down to ~5ms.
 * Deployed one server on an AWS EC2 instance and stressed tested with Loader.io. At 500 CPS the average response time was ~315 ms.
-* Scaled microservice by deploying a second server and integrated NGINX as a load-balancer. Stress tested again with Loader.io and was able to increase CPS up to 1000, reduce average response time to ~23ms, and at a 0% error rate.
+* Scaled microservice by deploying a second server and integrated NGINX as a load-balancer. Stress tested again with Loader.io and was able to, at a 0% error rate, increase CPS up to 1000 and reduce average response time to ~23ms.
 
 ### How to use
 To get dependencies
