@@ -7,7 +7,7 @@
 </div>
 
 
-For this project, I worked with a team to refactor the monolithic API for an e-commerce clothing retailer into microservices. Each team member worked on separate microservices and my endpoints involved the product data.
+For this project, I worked with a team to refactor a monolithic API for an e-commerce clothing retailer into microservices. Each team member worked on separate microservices and my endpoints involved the product data.
 
 ### Results
 * Seeded PostgreSQL database with over 10 million entries of product and product styles data.
@@ -46,7 +46,7 @@ npm run k6
 * k6
 
 ### Team
-* <a href="https://github.com/jleiandy">Andy Lei</a>,
-* <a href="https://github.com/cry-stal-lee">Crystal Lee</a>,
+* <a href="https://github.com/jleiandy">Andy Lei</a>
+* <a href="https://github.com/cry-stal-lee">Crystal Lee</a>
 * <a href="https://github.com/nickwai1">Nick Wai</a>
 
