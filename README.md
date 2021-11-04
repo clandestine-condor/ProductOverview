@@ -10,15 +10,17 @@
 For this project, I worked with a team to refactor the monolithic API for an e-commerce clothing retailer into microservices. Each team member worked on separate microservices and my endpoints involved the product data.
 
 ### How to use
+To get dependencies
 ```
-npm install to get dependencies
+npm install 
 ```
 
 Create a .env file, copy the contents of the .env.dist file into the .env file, and replace the placeholder
 values with your environment variables.
 
+To run server
 ```
-npm start to run server
+npm start
 ```
 
 To run the k6 stress test, download k6 from https://k6.io/open-source and use script 
